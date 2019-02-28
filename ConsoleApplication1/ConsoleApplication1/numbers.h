@@ -1,4 +1,5 @@
 #include <string>
+
 using namespace std;
 string numbers_lt_20_to_string(int number)
 {
@@ -24,19 +25,53 @@ string numbers_lt_20_to_string(int number)
 	case 17:answer = "семьнадцать"; break;	
 	case 18:answer = "восемьнадцать"; break;	
 	case 19:answer = "девятьнадцать"; break;
-	case 20:answer = "двадцадь"; break;	
-	case 30:answer = "тридцать"; break;	
-	case 40:answer = "сорок"; break;
-	case 50:answer = "пятьдесять"; break;	
-	case 60:answer = "шестьдесять"; break;	
-	case 70:answer = "семьдесять"; break;
-	case 80:answer = "восемьдесять"; break;	
-	case 90:answer = "девяносто"; break;	
-	case 100:answer = "сто"; break;	
-
-
-
 	default: break;	
 	}
+	return answer;
+}
+	string numbers_lt_100_to_string(int number){
+		string answer;
+		int tens = number / 10;
+		int remainder =number % 10;
+		if (number < 20) answer = numbers_lt_20_to_string(number);
+		switch (tens){
+		case 2:answer = "двадцать"; break;	
+		case 3:answer = "тридцать"; break;	
+		case 4:answer = "сорок"; break;
+		case 5:answer = "пятьдесять"; break;	
+		case 6:answer = "шестьдесять"; break;	
+		case 7:answer = "семьдесять"; break;
+		case 8:answer = "восемьдесять"; break;	
+		case 9:answer = "девяносто"; break;
+		default: break;
+		}
+		if(remainder != 0){
+			answer +=" "+numbers_lt_20_to_string(remainder);
+		}
+		return answer;
+}
+
+string numbers_lt_1000_to_string(int number){
+	string answer;
+	int hunders = number / 100;
+	int remainder = number % 100;
+	if (number < 100) answer = numbers_lt_100_to_string(number);
+	switch (hunders)
+	{
+		case 1:answer = "сто"; break;	
+		case 2:answer = "двести"; break;
+		case 3:answer = "триста"; break;	
+		case 4:answer = "четыреста"; break;
+		case 5:answer = "пятьсот"; break;	
+		case 6:answer = "шестьсот"; break;
+		case 7:answer = "семьсот"; break;	
+		case 8:answer = "восемьсот"; break;
+		case 9:answer = "девятьсот"; break;	
+		default: break;
+	}
+		if (remainder != 0)
+		{
+			answer +=" "+numbers_lt_100_to_string(remainder);
+		}
 	return answer;
 }
