@@ -20,11 +20,11 @@ string numbers_lt_20_to_string(int number)
 	case 12:answer = "двенадцать"; break;	
 	case 13:answer = "тринадцать"; break;	
 	case 14:answer = "четырнадать"; break;	
-	case 15:answer = "пятьнадцать"; break;	
-	case 16:answer = "шестьнадцать"; break;	
-	case 17:answer = "семьнадцать"; break;	
-	case 18:answer = "восемьнадцать"; break;	
-	case 19:answer = "девятьнадцать"; break;
+	case 15:answer = "пятнадцать"; break;	
+	case 16:answer = "шестнадцать"; break;	
+	case 17:answer = "семнадцать"; break;	
+	case 18:answer = "восемнадцать"; break;	
+	case 19:answer = "девятнадцать"; break;
 	default: break;	
 	}
 	return answer;
@@ -32,8 +32,8 @@ string numbers_lt_20_to_string(int number)
 	string numbers_lt_100_to_string(int number){
 		string answer;
 		int tens = number / 10;
-		int remainder =number % 10;
-		if (number < 20) answer = numbers_lt_20_to_string(number);
+		int remainder = number % 10;
+		
 		switch (tens){
 		case 2:answer = "двадцать"; break;	
 		case 3:answer = "тридцать"; break;	
@@ -45,7 +45,9 @@ string numbers_lt_20_to_string(int number)
 		case 9:answer = "девяносто"; break;
 		default: break;
 		}
-		if(remainder != 0){
+		if (number < 20) answer = numbers_lt_20_to_string(number);
+
+		else if(remainder != 0){
 			answer +=" "+numbers_lt_20_to_string(remainder);
 		}
 		return answer;
@@ -55,7 +57,7 @@ string numbers_lt_1000_to_string(int number){
 	string answer;
 	int hunders = number / 100;
 	int remainder = number % 100;
-	if (number < 100) answer = numbers_lt_100_to_string(number);
+	
 	switch (hunders)
 	{
 		case 1:answer = "сто"; break;	
@@ -69,7 +71,8 @@ string numbers_lt_1000_to_string(int number){
 		case 9:answer = "девятьсот"; break;	
 		default: break;
 	}
-		if (remainder != 0)
+		if (number < 100) answer = numbers_lt_100_to_string(remainder);
+		else if (remainder != 0)
 		{
 			answer +=" "+numbers_lt_100_to_string(remainder);
 		}

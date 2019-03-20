@@ -21,14 +21,14 @@ BOOST_AUTO_TEST_CASE( test_case1 )
 	BOOST_TEST_CHECK(numbers_lt_20_to_string(12) == string("двенадцать"));
 	BOOST_TEST_CHECK(numbers_lt_20_to_string(13) == string("тринадцать"));
 	BOOST_TEST_CHECK(numbers_lt_20_to_string(14) == string("четырнадать"));
-	BOOST_TEST_CHECK(numbers_lt_20_to_string(15) == string("пятьнадцать"));
-	BOOST_TEST_CHECK(numbers_lt_20_to_string(16) == string("шестьнадцать"));
-	BOOST_TEST_CHECK(numbers_lt_20_to_string(17) == string("семьнадцать"));
-	BOOST_TEST_CHECK(numbers_lt_20_to_string(18) == string("восемьнадцать"));
-	BOOST_TEST_CHECK(numbers_lt_20_to_string(19) == string("девятьнадцать"));
+	BOOST_TEST_CHECK(numbers_lt_20_to_string(15) == string("пятнадцать"));
+	BOOST_TEST_CHECK(numbers_lt_20_to_string(16) == string("шестнадцать"));
+	BOOST_TEST_CHECK(numbers_lt_20_to_string(17) == string("семнадцать"));
+	BOOST_TEST_CHECK(numbers_lt_20_to_string(18) == string("восемнадцать"));
+	BOOST_TEST_CHECK(numbers_lt_20_to_string(19) == string("девятнадцать"));
 }
 BOOST_AUTO_TEST_CASE( test_case2 ){
-	BOOST_TEST_CHECK(numbers_lt_100_to_string(21) == string("двадцать один"));
+	BOOST_TEST_CHECK(numbers_lt_100_to_string(1) == string("один"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(33) == string("тридцать три"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(45) == string("сорок пять"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(52) == string("пятьдесять два"));
@@ -39,9 +39,9 @@ BOOST_AUTO_TEST_CASE( test_case2 ){
 
 }
 BOOST_AUTO_TEST_CASE( test_case3 ){
-	BOOST_TEST_CHECK(numbers_lt_1000_to_string(121) == string("сто двадцать один"));
-	BOOST_TEST_CHECK(numbers_lt_1000_to_string(200) == string("двести"));
-	BOOST_TEST_CHECK(numbers_lt_1000_to_string(300) == string("триста"));
+	BOOST_TEST_CHECK(numbers_lt_1000_to_string(1) == string("один"));
+	BOOST_TEST_CHECK(numbers_lt_1000_to_string(296) == string("двести девяносто шесть"));
+	BOOST_TEST_CHECK(numbers_lt_1000_to_string(14) == string("четырнадать"));
 	BOOST_TEST_CHECK(numbers_lt_1000_to_string(400) == string("четыреста"));
 	BOOST_TEST_CHECK(numbers_lt_1000_to_string(500) == string("пятьсот"));
 	BOOST_TEST_CHECK(numbers_lt_1000_to_string(600) == string("шестьсот"));
