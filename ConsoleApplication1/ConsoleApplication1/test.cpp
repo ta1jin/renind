@@ -29,7 +29,7 @@ BOOST_AUTO_TEST_CASE( test_case1 )
 }
 BOOST_AUTO_TEST_CASE( test_case2 ){
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(1) == string("один"));
-	BOOST_TEST_CHECK(numbers_lt_100_to_string(33) == string("тридцать три"));
+	BOOST_TEST_CHECK(numbers_lt_100_to_string(30) == string("тридцать"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(45) == string("сорок пять"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(52) == string("пятьдесять два"));
 	BOOST_TEST_CHECK(numbers_lt_100_to_string(64) == string("шестьдесять четыре"));
