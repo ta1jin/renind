@@ -35,15 +35,15 @@ string numbers_lt_20_to_string(int number)
 		int remainder = number % 10;
 		
 		switch (tens){
-		case 2:answer = "двадцать"; break;	
-		case 3:answer = "тридцать"; break;	
-		case 4:answer = "сорок"; break;
-		case 5:answer = "пятьдесять"; break;	
-		case 6:answer = "шестьдесять"; break;	
-		case 7:answer = "семьдесять"; break;
-		case 8:answer = "восемьдесять"; break;	
-		case 9:answer = "девяносто"; break;
-		default: break;
+			case 2:answer = "двадцать"; break;	
+			case 3:answer = "тридцать"; break;	
+			case 4:answer = "сорок"; break;
+			case 5:answer = "пятьдесять"; break;	
+			case 6:answer = "шестьдесять"; break;	
+			case 7:answer = "семьдесять"; break;
+			case 8:answer = "восемьдесять"; break;	
+			case 9:answer = "девяносто"; break;
+			default: break;
 		}
 		if (number < 20) answer = numbers_lt_20_to_string(number);
 
@@ -71,10 +71,10 @@ string numbers_lt_1000_to_string(int number){
 		case 9:answer = "девятьсот"; break;	
 		default: break;
 	}
-		if (number < 100) answer = numbers_lt_100_to_string(remainder);
-		else if (remainder != 0)
-		{
-			answer +=" "+numbers_lt_100_to_string(remainder);
-		}
+	if (number < 100) answer = numbers_lt_100_to_string(remainder);
+	else if (remainder != 0)
+	{
+		answer +=" "+numbers_lt_100_to_string(remainder);
+	}
 	return answer;
 }
